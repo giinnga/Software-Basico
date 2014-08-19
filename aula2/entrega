@@ -1,0 +1,21 @@
+Função Dump
+
+1) A função dump recebe o endereço no qual o número está armazenado e o transforma em um ponteiro de caracteres. Dessa forma o programa percorre cada byte e imprime a informação contida nele e seu endereço, ambos em hexadecimal.
+
+2) A função funciona da mesma forma, porém enquanto int são 4 bytes, char é apenas 1.
+
+3) A função funciona da mesma forma, porém enquanto int são 4 bytes, short são apenas 2.
+
+4) Codigos ASCII para os elementos 'a', ' ', '\n' e '$':
+	a' = 61;
+	' ' = 20;
+	'\n' = 0a;
+	'$' = 24.
+
+Função string2num
+
+1) A função string2num transforma a string , casa por casa, em um inteiro. Ela pega o primeiro caracter, multiplica por 10 e soma com o segundo, ate que o *s chege no '\0', o qual vai sendo alterado com o *s++. Ao fazer ('s' - '0'), sabendo que os numeros no codigo ASCII estão em ordem, se tem o próprio número. Por exemplo, o código do '0' é 30, enquanto o do '1' é 31, subtraindo ambos tem-se o próprio número 1.
+
+2) Em diferentes bases, a diferença entre os números é a própria base, portanto basta alterar a fórmula do a, arquivo string2num.
+
+3)
