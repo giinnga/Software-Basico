@@ -18,4 +18,4 @@ Função string2num
 
 2) Em diferentes bases, a diferença entre os números é a própria base, portanto basta alterar a fórmula do a, arquivo string2num.
 
-3)
+3) A base máxima possível equivale ao número de algarismos existentes, portanto, a maior base possível é 36. Segue o arquivo de nome strin2numBase.c .
