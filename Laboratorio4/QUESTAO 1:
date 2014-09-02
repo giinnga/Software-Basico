@@ -1,0 +1,20 @@
+QUESTAO 1:
+
+char c = 150 -> 
+
+shrot s = -3 -> Um short e composto por 2 bits, 16 bytes no total, e usando a equacao de composição 2 a 2 para numeros negativos temos 2¹⁶-3 = 6553, que em hexa é 0x0FFFD;
+
+int i = -151 -> Pelo mesmo processo do short, porém com 4 bits, 32 bytes. 2³²-151 = 4294967145, que em hexa é 0xFFFFFF69;
+
+
+QUESTAO 2:
+
+A representacao em hexadecimal do short l = -32765 e do unsigned short k = 32771 é igual, pois fazendo a combinação 2 a 2 do short l tempos 32771, 0x8003;
+
+QUESTAO 4:
+
+Quando são relaizadas operações entre usigneds e signeds, os dois são considerados unsigned. O -1 unsigned e muito maior do que o 2, -1 = 0xFFFFFFFF e o 2 = 0x00000002;
+
+QUESTAO 5:
+
+Ian me explicou a diferença e ordem em mudar o tipo e depois o sinal e mudar o sinal e depois o tipo, a forma como o compilaor executa as ações muda o complemento na hora de converter o tamanho.
