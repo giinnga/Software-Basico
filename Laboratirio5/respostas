@@ -1,3 +1,20 @@
 QUESTAO 1:
 
 Ao vetor de inteiros b são atribuídos os valores (0,1), e como o sistema e L.E. os inteiros são armazenados de forma contrária, então o 1 se encontra como 0x01000000. Seu tamanho total é 8, 4 bytes por ser int e duas casas.
+Mesmo raciocínio pode ser aplicado ao short, de tal forma que um short tem 2 bytes, então um array de arrays com 6 casas total tem 12 bytes.
+
+
+QUESTAO 2:
+
+Struct é uma estrutura alinhada em múltiplo de 4. Quando se ocupa menos espaços do que um múltiplo de 4, o caso apresentado, os espaços que sobram se tornam buracos, chamados de padding. O numero de paddings podem variar de acordo com sua organização na própria struct. Nesse caso, como existe um short no meio, sobram 2 bytes, que se tornam os buracos.
+
+QUESTAO 3:
+
+Struct X1 -> Tamanho total de 12 bytes, sendo 6 de padding. Poderia ser otimizado para apenas 8 bytes, sendo 2 de padding.
+Struct X2 -> Tamanho total, e ótimo, de 8 bytes, sendo 3 de padding.
+Struct X3 -> Tamanho total, e ótimo, de 8 bytes, sendo 2 de padding.
+Struct X4 -> Tamanho total de 12 bytes, sendo 6 de padding. Esse fiquei na duvida se o ultimo char iria se encaixar após os bytes de padding da struct X2 ou se ele substituiria um desses espaços.
+Struct X5 -> Eu pensei q teria um byte de padding no final, porém isso não aconteceu, pq?
+Struct X6 -> Tamanho total de 16 bytes, sendo 5 de padding. Poderia ser otimizado, colocando como short s1, short s2, int i, char c[3], ocupando 12 bytes com apenas 1 de padding.
+
+Professora, fiquei com duvidas na parte de union, entendi o princípio de seu tamanho, ele vai ter o tamanho da maior variável dentro dele, porém não consigo ver aplicações.
