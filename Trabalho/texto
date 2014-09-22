@@ -1,0 +1,18 @@
+
+Hexadecimal -> UNICODE
+(0x000000   -> U+000000)
+
+UNICODE 8 (UTF - 8):
+
+De 1 a 4 bytes podem ser usados, dependendo do espaço necessário para representar o símbolo.
+Código UNICODE é dividido em intervalos para definir o número de bytes usados na codificação binária.
+U+0000  -> U+007F:   1 byte, 0xxxxxxx;
+U+0080  -> U+07FF:   2 bytes, 110xxxxx 10xxxxxx;
+U+0800  -> U+FFFF:   3 bytes, 1110xxxx 10xxxxxx 10xxxxxx;
+U+10000 -> U+10FFFF: 4 bytes, 11110xxx 10xxxxxx 10xxxxxx 10xxxxxx.
+
+UNICODE 32 (UTF - 32):
+
+Constante 4 bytes e susa ordem de armazenamento varia em big-endian e little-endian. Essa ordem de armazenamento é identificada por um caractere BOM no começo de um arquivo codificado em UNICODE, o qual raramente existe em UTF-8, pois não faz sentido falar em ordem de armazenamento.
+Big-endian: 00 00 FE FF;
+Little-endian: FF FE 00 00.
