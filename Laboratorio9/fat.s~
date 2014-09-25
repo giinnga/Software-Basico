@@ -1,0 +1,28 @@
+.globl fat
+fat:
+  /* prologo */
+	pushl %ebp
+	movl  %esp, %ebp
+	pushl %ebx
+
+  /* coloque seu codigo aqui */
+
+	movl	8(%ebp), %eax
+	movl	$1, %ebx
+
+L1:
+	/*movl	(%ebx), %eax*/
+
+	mul		%eax
+	cmpl	$0, %eax
+	jne		L2
+	popl	%ebx
+	movl	%ebp, %esp
+	popl	%ebp
+	ret
+
+
+L2:
+	subl	$1, %eax
+	jmp		L1
+
