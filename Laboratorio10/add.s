@@ -9,11 +9,11 @@ add:
     /* coloque seu codigo aqui */
 
     movl  8(%ebp),  %ebx /* ebx = struct X *x */
-    movl  $0,   %eax /* eax = a = 0 */
+    movl  $0,   %eax /* eax = 0 */
 
 L1:
     movl    (%ebx), %ecx
-    cmpl    $0, (%ebx)
+    cmpl    $0, 4(%ebx)
     jne     L2
 
     popl    %ebx
@@ -22,7 +22,7 @@ L1:
     ret
 
 L2:
-    addl    %eax,   %ecx
+    addl    %ecx,   %eax
     addl    $8, %ebx
     jmp     L1
 
