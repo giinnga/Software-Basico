@@ -1,0 +1,11 @@
+2) Para temp1.o pelos símbolos pode-se dizer que foo e printf, que estão com o símbolo U estão indefinidos no programa, enquanto D representa uma variável definida no código e o símbolo T, por último, representa texto. O símbolo que antes era U na temp1.o, na temp2.o vira T para foo(), pois essa esta declarada como texto na temp2 o int a vira U (era D na temp1) pois esta sendo importado, portanto nao esta definido na temp2.
+
+3) Ao mudar o tipo int para char apenas na temp1.c ocorre um conflito de tipos, pois na temp1.h ela ta sendo exportada como tipo int.
+
+4) a) Nao entendi o ocorrido.
+
+b) Ocorre conflito de definições da variável a. No primeiro momento em que foi definida (temp1.c) ela tinha tamanho 4 e no segundo momento (temp2.c) ela passou para tamanho 1. E como link editor so olha o nome da váriavel, acontece conflito.
+
+c) Utilizando static, o link editor entende que aquela váriavel só pode ser usada por aquele módulo, e como ela foi inicializada com valor 0, ela é representada pelo símbolo b.
+
+5) 

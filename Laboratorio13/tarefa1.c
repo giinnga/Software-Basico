@@ -19,16 +19,18 @@ float float2(float f) {
 	s = getsig(ui);
 	e = getexp(ui);
 	m = getmant(ui);
-	if(s == 0 && e == 0 && m == 0)
-		
+	if(s == 0 && e == 0xff && m == 0)
+		return 0;
+	if(e == 0xff)
+		return NAN;
 	e++;
 	u.i = makefloat(s,e,m);
 	return u.f;
 }
 
 int main (void) {
-	float f = 1;
-	f2 = float2(f);
-	printf("%f\n",f2);
+	float f;
+	f = float2(2);
+	printf("%f\n",f);
 	return 0;
 }
