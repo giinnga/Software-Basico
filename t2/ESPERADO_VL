@@ -1,0 +1,46 @@
+
+
+55					85
+89 e5				137 229
+
+83 ec 14			131 236 20			AUMENTO DE PILHA
+
+b9 01 00 00 00		185 xx xx xx xx		CONSTANTE PARA ECX
+
+ba 01 00 00 00		186 xx xx xx		CONSTANTE PARA EDX
+
+01 ca				1 202				SOMA
+
+52					82					ATRIBUICAO (EMPILHA EDX)
+
+8b 45 fc			139 69 252			RETORNO VARIAVEL LOCAL
+
+89 ec				137 236
+5d					93
+c3					195
+
+
+TESTE POP
+
+
+
+55					85
+89 e5				137 229
+
+83 ec 14			131 236 20			AUMENTO DE PILHA
+
+b9 01 00 00 00		185 xx xx xx xx		CONSTANTE PARA ECX
+
+ba 01 00 00 00		186 xx xx xx		CONSTANTE PARA EDX
+
+01 ca				1 202				SOMA
+
+52					82					ATRIBUICAO (EMPILHA EDX)
+
+8b 45 fc			139 69 252			RETORNO VARIAVEL LOCAL
+
+5a					90					POP EDX
+
+89 ec				137 236
+5d					93
+c3					195
